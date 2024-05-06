@@ -7,9 +7,9 @@ public class Solution {
     public static void main(String[] args) {
         System.out.println("test code");
         System.out.println("new test code");
-        System.out.println("test code");
-        System.out.println("test code");
-        System.out.println("test code");
+        System.out.println("new test code");
+        System.out.println("new test code");
+        System.out.println("new test code");
         System.out.println("test code");
         System.out.println("test code");
         System.out.println("test code");
