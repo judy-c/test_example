@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Solution {
+class Solution1 {
     public List<Integer> findServiceGroup(int n, int[] edges) {
         List<Integer> res = new ArrayList<>();
         int[] visited = new int[n];
@@ -59,7 +59,7 @@ class Solution {
         }
         scanner.close();
 
-        Solution solution = new Solution();
+        Solution1 solution = new Solution1();
         List<Integer> res = solution.findServiceGroup(n, edges);
 
         for (int i = 0; i < res.size(); i++) {
