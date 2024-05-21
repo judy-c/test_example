@@ -1,4 +1,5 @@
-public class Solution3 {
+public class BTreeClass {
     public static void main(String[] args) {
+        String str = "";
     }
 }
