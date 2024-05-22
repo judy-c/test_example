@@ -1,5 +1,3 @@
-import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
 
 public class Solution1 {
@@ -44,8 +42,8 @@ public class Solution1 {
         }
     }
 
+    public static Scanner scanner = new Scanner(System.in);
     public static int[] input() {
-        Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
         String[] numbers = input.split(" ");
         int[] a = new int[numbers.length];
