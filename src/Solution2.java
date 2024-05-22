@@ -47,12 +47,12 @@ class minCost {
             dp[s1][s2] = Integer.MAX_VALUE;
         }
 
-        for (int i = s1 - 1; i >= e1; i--) {
-            for (int j = s2 + 1; j <= e2; j++) {
+        for (int i = s1 - 1; i > e1; i--) {
+            for (int j = s2 + 1; j < e2; j++) {
                 if (arr[i][j].equals("B")) {
                     dp[i][j] = Integer.MAX_VALUE;
                 } else {
-                    dp[i][j] = Math.min(dp[i + 1][j], dp[j - 1][i]);
+                    dp[i][j] = Math.min(dp[i + 1][j], dp[i][j - 1]);
                     if (!(arr[i][j].equals("C") || arr[i][j].equals("E") || arr[i][j].equals("S"))) {
                         dp[i][j] += Integer.parseInt(arr[i][j]);
                     }
@@ -60,7 +60,7 @@ class minCost {
             }
         }
 
-        return dp[e1 - s1 + 1][e2 - s2];
+        return dp[0][e2 - s2];
     }
 
 
@@ -92,12 +92,12 @@ class minCost {
             }
         }
 
-        for (int i = s1 + 1; i <= e1; i++) {
-            for (int j = s2 + 1; j <= e2; j++) {
+        for (int i = s1 + 1; i < e1; i++) {
+            for (int j = s2 + 1; j < e2; j++) {
                 if (arr[i][j].equals("B")) {
                     dp[i][j] = Integer.MAX_VALUE;
                 } else {
-                    dp[i][j] = Math.min(dp[i - 1][j], dp[j - 1][i]);
+                    dp[i][j] = Math.min(dp[i - 1][j], dp[i][j - 1]);
                     if (!(arr[i][j].equals("C") || arr[i][j].equals("E") || arr[i][j].equals("S"))) {
                         dp[i][j] += Integer.parseInt(arr[i][j]);
                     }
@@ -112,7 +112,7 @@ class minCost {
 
 
 
-public class Solution2 {
+public class Main {
 
 
     public static void main(String[] args) {
